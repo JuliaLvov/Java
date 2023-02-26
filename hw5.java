@@ -1,5 +1,9 @@
 import java.util.HashMap;
 
+// Создать множество, ключь и значение строки. Добавить шесть элементов. Вывести в консоль значения. Добавить ко всем значениям символ "!".
+// Создать второе множество с таким же обобщением. Ключи второго множества частично совпадают с ключеми первого.
+// Объеденить значания во втором множестве и первом если ключи совподают. Вывести результат в консоль.
+
 public class hw5 {
     public static void main(String[] args) {
         
@@ -13,6 +17,10 @@ public class hw5 {
 
             hashMap.forEach((k,v) -> System.out.println(k + " " + v));
             System.out.println(hashMap);
+
+            for(Integer v: hashMap.values()){
+                System.out.println(v+" !");
+            }
 
             hashMap.compute("first",(k,v) -> Integer.toBinaryString(v).length());
             System.out.println(hashMap.compute("first",(k,v) -> Integer.toBinaryString(v).length()));
