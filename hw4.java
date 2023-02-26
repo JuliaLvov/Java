@@ -58,7 +58,7 @@ public class hw4 {
         ArrayList<Boolean> gender = new ArrayList<>();
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ф.И.О Возраст пол, через прбел. Выход х");
+        System.out.println("Ф.И.О Возраст пол, через пробел латинскими буквами. Выход х");
 
         boolean run = true;
         while (run) {
@@ -73,7 +73,7 @@ public class hw4 {
                 patronymic.add(data[2]);
                 age.add(Integer.parseInt(data[3]));
 
-                gender.add(data[4].contains("м"));
+                gender.add(data[4].contains("w"));
             }
         }
         for (int i = 0; i < lastName.size(); i++) {
