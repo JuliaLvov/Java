@@ -2,7 +2,7 @@ package GeoWithResearch;
 
 import java.util.ArrayList;
 
-public class Person {
+public class Person implements Printable{
     public String fullName;
     public Gender gender; 
     public int age;
@@ -38,6 +38,7 @@ public class Person {
      }
 
     
+
     //  public ArrayList<String> viewGender(String gender){
     //     ArrayList<String> result = new ArrayList<String>();
     //     for (Person t : family){

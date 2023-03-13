@@ -19,7 +19,9 @@ public class Main {
         System.out.println(new Reserch(gt).spend(irina,
                 Relationship.parent));
         
-        System.out.println(new Reserch(gt).oldierPerson(25)); 
+        System.out.println(new Reserch(gt).oldierPerson(25)); //выводит список людей старше указанного возраста
+
+        
 
         // System.out.println(masha.viewGender("Male"));
     }
