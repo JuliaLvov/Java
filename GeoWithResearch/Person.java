@@ -2,7 +2,7 @@ package GeoWithResearch;
 
 import java.util.ArrayList;
 
-public class Person implements Printable{
+public class Person implements Printable, Comparable<Person>{
     public String fullName;
     public Gender gender; 
     public int age;
@@ -37,19 +37,28 @@ public class Person implements Printable{
             return this.gender.toString();
      }
 
-    
+     public String toString(){
+        return String.format("%s: %d %s", getFullName(), getAge(), getGender());
+    }
 
-    //  public ArrayList<String> viewGender(String gender){
-    //     ArrayList<String> result = new ArrayList<String>();
-    //     for (Person t : family){
-    //         if(t.getGender() == gender) result.add(t.fullName + " " + t.getGender());
-    //     }
-    //     return result;
-    // }
+    public void print(){
+        System.out.println(this.toString());
+        System.out.println();
+    }
     
-     // public String toString(){
-    //     return this.fullName;
-    // }
+    @Override
+    public int compareTo(Person anotherPerson){
+        if (this.age == anotherPerson.age){
+            return 0;
+        }
+        else if (this.age < anotherPerson.age){
+            return -1;
+        }
+        else{
+            return 1;
+        }
+    }
+
 
 
 }

@@ -30,12 +30,23 @@ public class Reserch {
         return result;
     }
 
+    public ArrayList<String> youngerPerson(int age) {
+        for (Node t : tree) {
+            if (t.p1.age < age) {
+                result.add(t.p1.fullName + " " + t.p1.age + " лет");
+            }
+        }
+        return result;
+    }
+
     public ArrayList<String> viewGender(String gender){
         for (Node t : tree){
             if(t.p1.getGender() == gender) result.add(t.p1.fullName + " " + t.p1.gender);
         }
         return result;
     }
+
+    
 }       
 
 
