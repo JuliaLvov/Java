@@ -1,9 +1,12 @@
 package OOP.HM2;
 
-public class Person extends Animal implements InterCall, InterCaress{
+public class Person implements InterCall, InterCaress{
+
+    private  String name;
+    private int pleasure;
 
     public Person(String name){
-        super(name); 
+        this.name= name; 
 
     }
 

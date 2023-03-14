@@ -1,26 +1,17 @@
 package OOP.HM2;
 
-public class Cat extends Animal implements InterCall, InterGetCaress {
+public class Cat extends Animal implements InterCall, InterGetCaress, Comparable<Cat> {
 
-    public Cat(String name){ 
-        super(name); 
+    public Cat(String name, String colour){ 
+        super(name, colour);
               
     }
-
-
-    // public String getName(){  // на получение
-    //     return name;
-    // }
-    
-    // public void setName(String name) { // задать какое-то значение
-    //     this.name = name;               
-    // }
 
     
 
     @Override
-    public String toString(){
-        return this.name;
+       public String toString(){
+        return String.format("%s:%s", this.name, this.colour);
     }
 
     public String voice(){
@@ -33,12 +24,17 @@ public class Cat extends Animal implements InterCall, InterGetCaress {
     }
 
     public String getInfo(){
-        return String.format("Кличка: %s  Pleasure: %d", this.name, this.pleasure);
+        return String.format("Кличка: %s  Pleasure: %d", this.name, this.pleasure, this);
     }
 
     public void getCaress(int touch){
          this.pleasure =+ touch;
      
+    }
+
+    @Override
+    public int compareTo(Cat anotherCat){
+        return this.colour.compareTo(anotherCat.colour);
     }
         
     
