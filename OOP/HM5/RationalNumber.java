@@ -3,7 +3,7 @@ package OOP.HM5;
 
 
 public abstract class RationalNumber implements RationalCalcModel {
-    
+
     double firstNumber;
     double secondNumber;
 
