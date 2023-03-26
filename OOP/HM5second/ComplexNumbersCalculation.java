@@ -9,9 +9,9 @@ public class ComplexNumbersCalculation extends GeneralNumberDescriptor implement
 
     @Override
     public ComplexNumbers div() {
-        return new ComplexNumbers(((Double)((getX() * getA()) - (getY() * getB()))) /
+        return new ComplexNumbers(((Double)((getX() * getA()) + (getY() * getB()))) /
                     ((Double)(Math.pow(getA(), 2) + Math.pow(getB(), 2))),
-                    ((Double)((getX() * getB()) + (getA() * getY()))) /
+                    ((Double)((getX() * getB()) - (getA() * getY()))) /
                     ((Double)(Math.pow(getA(), 2) + Math.pow(getB(), 2))));
 
     }

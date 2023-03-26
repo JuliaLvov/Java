@@ -10,10 +10,17 @@ public class View {
         return in.nextDouble();
     }
 
+    
+
   
 
-    public void print(double data, String title){
-        System.out.printf("%s %f", title, data);
+    public void print(Double data, String title){
+        System.out.printf("%s %f\n", title, data);
+    }
+
+    
+    public void print(ComplexNumbers data, String title){
+        System.out.printf("%s %s\n", title, data);
     }
     
 }

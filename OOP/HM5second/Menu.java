@@ -22,6 +22,20 @@ public class Menu {
         return scanner.nextLine();
     }
 
+    public String selectOperation() {
+        System.out.print("""
+                
+                Выберите действие:
+                --------------------------------------
+                1. Сложение 
+                2. Вычитание  
+                3. Умножение
+                4. Деление
+                0. Выход
+                """);
+        return scanner.nextLine();
+    }
+
     
     
 }
